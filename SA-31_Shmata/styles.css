@@ -1,0 +1,236 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    background-color: #0a9396;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0a9396;
+    border-radius: 0 0 8px 8px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #caffbf;
+}
+
+.content {
+    padding: 20px 0;
+    text-align: left;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 40px;
+    text-align: left;
+    background-color: #e9d8a6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #293241;
+}
+
+
+.price-container {
+    display: flex; /* Розміщує блоки в ряд */
+    flex-wrap: wrap; /* Заворот рядків, якщо елементів забагато для одного рядка */
+    justify-content: space-between; /* Рівномірно розподіляє простір між елементами */
+}
+
+.price-item {
+    width: calc(33.333% - 20px); /* Для рівномірного розподілу на 3 колонки з відступами */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden; /* Запобігає виходженню зображення за межі блоку */
+}
+
+.price-item img {
+    width: 100%; /* Заповнює всю ширину блоку */
+    height: auto; /* Змінюємо висоту на автоматичну, щоб уникнути спотворення пропорцій */
+    object-fit: cover; /* Обрізає зображення, щоб воно вмістилося в блок */
+}
+
+.price-details {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Прозорий фон для тексту */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery img {
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.hero-image {
+    width: 100%; 
+    height: auto;
+    max-width: 100%; 
+}
+
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8em;
+    margin-top: 40px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-video {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-video {
+        height: 400px;
+    }
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+nav ul.show {
+    display: block;
+    background-color: #0a9396;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul.show li {
+    display: block;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul.show li a {
+    display: block;
+    padding: 15px 0;
+}
+
+nav ul.show li ul {
+    position: static;
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        background-color: #0a9396;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul.show li {
+        margin-bottom: 10px;
+    }
+
+    nav ul.show li ul {
+        padding-left: 0;
+    }
+}
+
+
+#submit-button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #0a9396;
+}
